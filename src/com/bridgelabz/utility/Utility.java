@@ -60,7 +60,7 @@ public class Utility {
 								ArrayList<ArrayList<generic>> array) {
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < coloumn; j++)
-				System.out.format("%2d ", array.get(i).get(j));
+				System.out.print(array.get(i).get(j)+" ");
 			System.out.println();
 		}
 	}	
@@ -80,8 +80,11 @@ public class Utility {
 	}
 	
 	public static void replaceName(String name) {
-		if (name.length() >= 3)
-			System.out.println("Hello " + name + " ,How are you?");
+		String template="Hello <<UserName>>, How are you?";
+		if (name.length() >= 3) {
+			template=template.replaceAll("<<UserName>>", name);
+			System.out.println(template);
+		}	
 		else
 			System.out.println("Name should be greater than 3 characters");
 	}
@@ -123,7 +126,7 @@ public class Utility {
 	
 	public static void powerOf2(int power) {
 		if (power >= 0 || power < 31) {
-			for (int i = 0; i < power; i++) {
+			for (int i = 0; i <= power; i++) {
 				System.out.println("2^" + i + " = " + (int) Math.pow(2, i));
 			}
 		}

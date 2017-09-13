@@ -16,17 +16,18 @@ import java.util.Scanner;
 
 public class TwoDArrays {
 
-	public static Scanner input = new Scanner(System.in);
+	public static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String args[]) {
-		int row = input.nextInt();
-		int coloumn = input.nextInt();
-		/*
-		 * System.out.println("Choose the type of Array:");
-		 * System.out.println("1: Integer"); System.out.println("2: Boolean");
-		 * System.out.println("3: Double");
-		 */
-		int choose = input.nextInt();
+		System.out.println("Enter the row Value:");
+		int row = scanner.nextInt();
+		System.out.println("Enter the cloumn Value:");
+		int coloumn = scanner.nextInt();
+		System.out.println("Choose the type of Array:");
+		System.out.println("1: Integer");
+		System.out.println("2: Double");
+		System.out.println("3: Boolean");
+		int choose = scanner.nextInt();
 		Utility.arrayDisplay(row, coloumn, Utility.genericTwoDArray(row, coloumn, 
 							choose));
 	}
