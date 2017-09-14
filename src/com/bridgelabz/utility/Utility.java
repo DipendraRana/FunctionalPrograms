@@ -35,7 +35,7 @@ public class Utility {
 			}
 			count++;
 		}
-		System.out.println(count);
+		System.out.println(""+count);
 	}
 	
 	public static boolean checkArray(int index, int radomNum, int array[]) {
@@ -202,7 +202,7 @@ public class Utility {
 		}
 		System.out.println("no. of Wins = "+win);
 		System.out.println("Wins is "+((double)win/noOfTimes*100)+"%");
-		System.out.println("Wins is "+(100-(double)win/noOfTimes*100)+"%");
+		System.out.println("Loss is "+(100-(double)win/noOfTimes*100)+"%");
 	}
 	
 	public static void euclideanDistance(int xPoint,int yPoint) {
@@ -240,6 +240,7 @@ public class Utility {
 	
 	public static void stopWatchSimulator() {
 		long startTime=System.currentTimeMillis();
+	
 		long total = 0;
 	    for (int i = 0; i < 200000000; i++) {
 	      total = total+ i;

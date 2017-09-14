@@ -17,10 +17,17 @@ public class LeapYear {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int year=input.nextInt();
-		if(Utility.leapYearFinder(year)) 
-			System.out.println("Leap Year");
-		else
-			System.out.println("Not Leap Year");
+		int year = 0;
+		try {
+			year = input.nextInt();
+			if(Utility.leapYearFinder(year)) 
+				System.out.println("Leap Year");
+			else
+				System.out.println("Not Leap Year");
+		} catch (Exception e) {
+			System.out.println("Invalid Input");
+		}
+		
+		
 	}
 }
